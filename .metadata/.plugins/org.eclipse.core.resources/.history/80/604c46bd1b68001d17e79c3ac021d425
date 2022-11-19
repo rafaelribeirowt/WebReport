@@ -1,0 +1,16 @@
+
+
+#Postgres persistence
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    platform: POSTGRESQL
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+#      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQLDialect

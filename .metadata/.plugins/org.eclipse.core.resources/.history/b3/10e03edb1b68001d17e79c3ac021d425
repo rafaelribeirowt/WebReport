@@ -1,0 +1,12 @@
+datasource: ''
+dialect: org.hibernate.dialect.PostgreSQLDialect
+hibernate: ''
+jpa: ''
+password: postgres
+platform: POSTGRESQL
+show-sql: true
+spring: ''
+testWhileIdle: true
+url: jdbc:postgresql://localhost:5432/postgres
+username: postgres
+validationQuery: SELECT 1

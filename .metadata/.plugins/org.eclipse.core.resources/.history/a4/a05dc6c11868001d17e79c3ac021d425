@@ -1,0 +1,123 @@
+package com.raizes.entities;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class LinkProdutos implements Serializable{
+	
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	private Long id_produto;
+	private Long produto_codigo;
+	private String descricao;
+	private Double preco_custo; 
+	private Double preco_venda;
+	private Boolean inativo;
+	
+	
+	public LinkProdutos() {
+	}
+
+
+	public Long getId_produto() {
+		return id_produto;
+	}
+
+
+	public void setId_produto(Long id_produto) {
+		this.id_produto = id_produto;
+	}
+
+
+	public Long getProduto_codigo() {
+		return produto_codigo;
+	}
+
+
+	public void setProduto_codigo(Long produto_codigo) {
+		this.produto_codigo = produto_codigo;
+	}
+
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+
+	public Double getPreco_custo() {
+		return preco_custo;
+	}
+
+
+	public void setPreco_custo(Double preco_custo) {
+		this.preco_custo = preco_custo;
+	}
+
+
+	public Double getPreco_venda() {
+		return preco_venda;
+	}
+
+
+	public void setPreco_venda(Double preco_venda) {
+		this.preco_venda = preco_venda;
+	}
+
+
+	public Boolean getInativo() {
+		return inativo;
+	}
+
+
+	public void setInativo(Boolean inativo) {
+		this.inativo = inativo;
+	}
+
+
+	@Override
+	public String toString() {
+		return "LinkProdutos [id_produto=" + id_produto + ", produto_codigo=" + produto_codigo + ", descricao="
+				+ descricao + ", preco_custo=" + preco_custo + ", preco_venda=" + preco_venda + ", inativo=" + inativo
+				+ "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(descricao, id_produto, inativo, preco_custo, preco_venda, produto_codigo);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LinkProdutos other = (LinkProdutos) obj;
+		return Objects.equals(descricao, other.descricao) && Objects.equals(id_produto, other.id_produto)
+				&& Objects.equals(inativo, other.inativo) && Objects.equals(preco_custo, other.preco_custo)
+				&& Objects.equals(preco_venda, other.preco_venda)
+				&& Objects.equals(produto_codigo, other.produto_codigo);
+	}
+
+	
+	
+	
+	
+	
+	
+}

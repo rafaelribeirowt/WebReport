@@ -1,0 +1,18 @@
+package com.raizes.service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.raizes.repository.LinkProdRepository;
+
+@RestController
+public class LinkController {
+
+	
+	
+	
+	
+	
+	
+	
+}

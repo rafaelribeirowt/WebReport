@@ -1,0 +1,5 @@
+package com.raizes.repository;
+
+public interface LinkProdRepository {
+
+}
