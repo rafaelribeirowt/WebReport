@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Oauth
+server:
+  port: 8002

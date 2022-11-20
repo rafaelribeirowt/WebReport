@@ -15,11 +15,11 @@ public class LinkProdutos implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	private Long id_produto;
-	private Long produto_codigo;
+	private Long idProduto;
+	private Long produtoCodigo;
 	private String descricao;
-	private Double preco_custo; 
-	private Double preco_venda;
+	private Double precoCusto; 
+	private Double precoVenda;
 	private Boolean inativo;
 	
 	
@@ -27,23 +27,34 @@ public class LinkProdutos implements Serializable{
 	}
 
 
-	public Long getId_produto() {
-		return id_produto;
+	public LinkProdutos(Long idProduto, Long produtoCodigo, String descricao, Double precoCusto, Double precoVenda,
+			Boolean inativo) {
+		this.idProduto = idProduto;
+		this.produtoCodigo = produtoCodigo;
+		this.descricao = descricao;
+		this.precoCusto = precoCusto;
+		this.precoVenda = precoVenda;
+		this.inativo = inativo;
 	}
 
 
-	public void setId_produto(Long id_produto) {
-		this.id_produto = id_produto;
+	public Long getIdProduto() {
+		return idProduto;
 	}
 
 
-	public Long getProduto_codigo() {
-		return produto_codigo;
+	public void setIdProduto(Long idProduto) {
+		this.idProduto = idProduto;
 	}
 
 
-	public void setProduto_codigo(Long produto_codigo) {
-		this.produto_codigo = produto_codigo;
+	public Long getProdutoCodigo() {
+		return produtoCodigo;
+	}
+
+
+	public void setProdutoCodigo(Long produtoCodigo) {
+		this.produtoCodigo = produtoCodigo;
 	}
 
 
@@ -57,23 +68,23 @@ public class LinkProdutos implements Serializable{
 	}
 
 
-	public Double getPreco_custo() {
-		return preco_custo;
+	public Double getPrecoCusto() {
+		return precoCusto;
 	}
 
 
-	public void setPreco_custo(Double preco_custo) {
-		this.preco_custo = preco_custo;
+	public void setPrecoCusto(Double precoCusto) {
+		this.precoCusto = precoCusto;
 	}
 
 
-	public Double getPreco_venda() {
-		return preco_venda;
+	public Double getPrecoVenda() {
+		return precoVenda;
 	}
 
 
-	public void setPreco_venda(Double preco_venda) {
-		this.preco_venda = preco_venda;
+	public void setPrecoVenda(Double precoVenda) {
+		this.precoVenda = precoVenda;
 	}
 
 
@@ -88,16 +99,8 @@ public class LinkProdutos implements Serializable{
 
 
 	@Override
-	public String toString() {
-		return "LinkProdutos [id_produto=" + id_produto + ", produto_codigo=" + produto_codigo + ", descricao="
-				+ descricao + ", preco_custo=" + preco_custo + ", preco_venda=" + preco_venda + ", inativo=" + inativo
-				+ "]";
-	}
-
-
-	@Override
 	public int hashCode() {
-		return Objects.hash(descricao, id_produto, inativo, preco_custo, preco_venda, produto_codigo);
+		return Objects.hash(descricao, idProduto, inativo, precoCusto, precoVenda, produtoCodigo);
 	}
 
 
@@ -110,11 +113,18 @@ public class LinkProdutos implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		LinkProdutos other = (LinkProdutos) obj;
-		return Objects.equals(descricao, other.descricao) && Objects.equals(id_produto, other.id_produto)
-				&& Objects.equals(inativo, other.inativo) && Objects.equals(preco_custo, other.preco_custo)
-				&& Objects.equals(preco_venda, other.preco_venda)
-				&& Objects.equals(produto_codigo, other.produto_codigo);
+		return Objects.equals(descricao, other.descricao) && Objects.equals(idProduto, other.idProduto)
+				&& Objects.equals(inativo, other.inativo) && Objects.equals(precoCusto, other.precoCusto)
+				&& Objects.equals(precoVenda, other.precoVenda) && Objects.equals(produtoCodigo, other.produtoCodigo);
 	}
+
+
+	@Override
+	public String toString() {
+		return "LinkProdutos [idProduto=" + idProduto + ", produtoCodigo=" + produtoCodigo + ", descricao=" + descricao
+				+ ", precoCusto=" + precoCusto + ", precoVenda=" + precoVenda + ", inativo=" + inativo + "]";
+	}
+
 
 	
 	
