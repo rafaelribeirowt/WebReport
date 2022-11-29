@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Oauth
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8761/eureka 
+aw:
+  auth:
+    provider-uri: "http://localhost:8002"
+    jks:
+      keypass: 123456
+      storepass: 123456
+      alias: awblog
+      path: keystore/awblog.jks
